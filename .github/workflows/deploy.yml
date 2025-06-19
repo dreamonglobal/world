@@ -32,7 +32,7 @@ jobs:
         with:
           name: global
       - name: Upload ftp
-        uses: sebastianpopp/ftp-action@releases/v1
+        uses: sebastianpopp/ftp-action@releases/v4
         with:
           host: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
