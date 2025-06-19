@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Heart, CreditCard, Wallet } from 'lucide-react';
 import { PayPalButtons } from '@paypal/react-paypal-js';
+import type { CreateOrderActions, CreateOrderData, CreateSubscriptionActions, OnApproveActions, OnApproveData } from '@paypal/paypal-js';
 
 export const Donate = () => {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
@@ -98,7 +99,7 @@ export const Donate = () => {
                   <div className="mt-6">
                     <PayPalButtons
                       style={{ layout: "horizontal" }}
-                      createOrder={(data, actions) => {
+                      createOrder={(_data: CreateOrderData, actions: CreateOrderActions) => {
                         return actions.order.create({
                           intent: "CAPTURE",
                           purchase_units: [
@@ -111,7 +112,7 @@ export const Donate = () => {
                           ],
                         });
                       }}
-                      onApprove={async (data, actions) => {
+                      onApprove={async (_data: OnApproveData, actions: OnApproveActions) => {
                         if (!actions.order) return;
                         const details = await actions.order.capture();
                         alert("Transaction completed by " + (details.payer?.name?.given_name ?? "Donor"));
@@ -149,12 +150,12 @@ export const Donate = () => {
                   <div className="mt-6">
                     <PayPalButtons
                       style={{ layout: "horizontal" }}
-                      createSubscription={(data, actions) => {
+                      createSubscription={(_data: Record<string, unknown>, actions: CreateSubscriptionActions) => {
                         return actions.subscription.create({
                           plan_id: getPlanId()
                         });
                       }}
-                      onApprove={async (data) => {
+                      onApprove={async (data: OnApproveData) => {
                         alert("You have successfully created subscription " + (data.subscriptionID ?? "(no ID returned)"));
                       }}
                     />
