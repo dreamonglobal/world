@@ -14,10 +14,10 @@ jobs:
         uses: nrwl/nx-set-shas@v4
 
       - name: Install Dependencies
-        uses: npm ci
+        run: npm ci
 
       - name: Run Affected Changes
-        uses: npx nx affected -t lint, typecheck, build
+        run: npx nx affected -t lint, typecheck, build
 
       - name: Upload Global
         uses: actions/upload-artifact@v4
