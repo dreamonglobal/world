@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { MapPin, Users, Heart, Globe2, Church, Users2, Megaphone } from 'lucide-react';
 import Globe from 'react-globe.gl';
 
