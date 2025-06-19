@@ -184,7 +184,7 @@ export const Home = () => {
           <h2 className="text-4xl font-bold mb-12 text-center">Dream Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member) => (
-              <div className="text-center" key={member.name}>
+              <div className="text-center">
                 <img 
                   src={member.image} 
                   alt={member.name} 
@@ -261,8 +261,8 @@ export const Home = () => {
             <Globe2 className="w-8 h-8" />
             <h2 className="text-4xl font-bold">Global Impact</h2>
           </div>
-          <div className="w-full flex justify-center items-center mb-24" style={{ minHeight: 500 }}>
-            <div className="w-full max-w-3xl aspect-square">
+          <div className="w-full flex justify-center items-center" style={{ minHeight: 500 }}>
+            <div className="aspect-square">
               <Globe
                 ref={globeRef}
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-dark.jpg"
