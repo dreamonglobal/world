@@ -1,0 +1,41 @@
+name: Dream On Publish
+on:
+  push:
+    branches: [master]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history and branches
+          filter: tree:0
+      - name: Set SHAs
+        uses: nrwl/nx-set-shas@v4
+
+      - name: Install Dependencies
+        uses: npm ci
+
+      - name: Run Affected Changes
+        uses: npx nx affected -t lint, typecheck, build
+
+      - name: Upload Global
+        uses: actions/upload-artifact@v4
+        with:
+          name: global
+          path: dist
+        env:
+          CI: true
+      
+      - name: Download Global Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: global
+      - name: Upload ftp
+        uses: sebastianpopp/ftp-action@releases/v1
+        with:
+          host: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          localDir: 'global'
+          remoteDir: 'public_html'
