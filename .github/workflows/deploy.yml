@@ -27,10 +27,17 @@ jobs:
         env:
           CI: true
       
+      - name: List dist contents
+        run: ls -l dist
+
       - name: Download Global Artifact
         uses: actions/download-artifact@v4
         with:
           name: global
+
+      - name: List global contents
+        run: ls -l global
+
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
         with:
