@@ -14,7 +14,12 @@ export const Navigation = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Logo />
         <div className="flex items-center gap-6">
-          <Link to="/" className={getLinkClass('/')}>Home</Link>
+          <Link 
+            to="/" 
+            className={`${getLinkClass('/')} hidden md:inline`}
+          >
+            Home
+          </Link>
           <Link to="/blog" className={getLinkClass('/blog')}>Blog</Link>
           <div className="flex items-center gap-4">
             <Link 
