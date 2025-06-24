@@ -204,7 +204,7 @@ export const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <Users className="w-8 h-8 mx-auto mb-4" />
-              <h3 className="text-4xl font-bold mb-2">150K+</h3>
+              <h3 className="text-4xl font-bold mb-2">200K+</h3>
               <p className="text-zinc-400">Ministered To</p>
             </div>
             <div className="text-center">
@@ -242,7 +242,7 @@ export const Home = () => {
               <Users2 className="w-12 h-12 mx-auto mb-6" />
               <h3 className="text-2xl font-bold mb-4">People Reached</h3>
               <div className="flex items-center justify-center gap-2 text-4xl font-bold">
-                <span className="text-white">150,000</span>
+                <span className="text-white">200,000</span>
                 <span className="text-zinc-500">/</span>
                 <span className="text-zinc-500">1M</span>
               </div>
