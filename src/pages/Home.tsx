@@ -90,7 +90,7 @@ const team = [
   },
   {
     name: 'Thiago Egydio',
-    role: 'Vide President of Dream On: Brazil',
+    role: 'Vice President of Dream On: Brazil',
     image: 'thiago-egydio.jpg'
   },
   {
