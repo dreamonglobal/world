@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Church } from 'lucide-react';
 import { getAllCampaigns } from '../../utils/getAllCampaigns';

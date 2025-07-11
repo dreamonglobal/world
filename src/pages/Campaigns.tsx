@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getAllCampaigns } from '../utils/getAllCampaigns';
 import { Campaign } from '../types/campaign';
 import { useNavigate } from 'react-router-dom';
