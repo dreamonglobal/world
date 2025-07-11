@@ -9,6 +9,8 @@ import { Contact } from './pages/Contact';
 import { Campaigns } from './pages/Campaigns';
 import { ChurchesBuilt } from './pages/campaigns/ChurchesBuilt';
 import { PeopleReached } from './pages/campaigns/PeopleReached';
+import { Store } from './pages/Store';
+import { StoreProduct } from './pages/StoreProduct';
 
 const paypalOptions = {
   clientId: import.meta.env.VITE_PAYPAL_CLIENT_ID || '',
@@ -32,6 +34,8 @@ function App() {
             <Route path="/campaigns/people" element={<PeopleReached />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/store" element={<Store />} />
+            <Route path="/store/:id" element={<StoreProduct />} />
           </Routes>
         </div>
       </Router>

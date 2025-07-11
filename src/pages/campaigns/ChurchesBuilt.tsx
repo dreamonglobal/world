@@ -3,16 +3,24 @@ import { Link } from 'react-router-dom';
 import { Church } from 'lucide-react';
 import { getAllCampaigns } from '../../utils/getAllCampaigns';
 import { Campaign } from '../../types/campaign';
+import { getAllShirts } from '../../utils/getAllShirts';
+import { ProductCard } from '../../components/ProductCard';
+import { Product } from '../../types/product';
 
 export const ChurchesBuilt = () => {
   const [campaign, setCampaign] = useState<Campaign | null>(null);
   const [loading, setLoading] = useState(true);
+  const [doBuildsShirt, setDoBuildsShirt] = useState<Product | null>(null);
 
   useEffect(() => {
     getAllCampaigns().then(campaigns => {
       const churchesCampaign = campaigns.find(c => c.slug === 'churches');
       setCampaign(churchesCampaign || null);
       setLoading(false);
+    });
+    getAllShirts().then(shirts => {
+      const shirt = shirts.find(s => s.id === 'do-builds-classic-tee');
+      setDoBuildsShirt(shirt || null);
     });
   }, []);
 
@@ -106,7 +114,7 @@ export const ChurchesBuilt = () => {
             <p className="text-zinc-300 mb-4">
               Your support helps us continue building churches in communities that need them most. Every donation brings us closer to our goal of {campaign.goal}. With an average cost of $7,000 per church, your contribution makes a significant impact.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <a
                 href="/donate"
                 className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full text-center font-semibold transition no-underline"
@@ -122,12 +130,19 @@ export const ChurchesBuilt = () => {
             </div>
           </div>
         </div>
-
-        <div className="text-center pb-16">
-          <Link to="/campaigns" className="text-white hover:text-zinc-300 transition inline-flex items-center gap-2">
-            ← Back to Campaigns
-          </Link>
+      </div>
+      {doBuildsShirt && (
+        <div className="my-8 flex flex-col items-center">
+          <h3 className="text-xl font-bold mb-4 text-center">Support by purchasing our DO: Builds Tee</h3>
+          <div className="max-w-xs w-full">
+            <ProductCard product={doBuildsShirt} onClick={() => window.location.href = `/store/${doBuildsShirt.id}`} />
+          </div>
         </div>
+      )}
+      <div className="text-center pb-16">
+        <Link to="/campaigns" className="text-white hover:text-zinc-300 transition inline-flex items-center gap-2">
+          ← Back to Campaigns
+        </Link>
       </div>
     </div>
   );

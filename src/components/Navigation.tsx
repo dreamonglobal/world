@@ -26,6 +26,7 @@ export const Navigation = () => {
           </Link>
           <Link to="/blog" className={getLinkClass('/blog')}>Blog</Link>
           <Link to="/campaigns" className={getLinkClass('/campaigns')}>Campaigns</Link>
+          <Link to="/store" className={getLinkClass('/store')}>Store</Link>
           <div className="flex items-center gap-4">
             <Link 
               to="/donate"
@@ -57,6 +58,7 @@ export const Navigation = () => {
             <Link to="/" className={getLinkClass('/')} onClick={() => setMobileOpen(false)}>Home</Link>
             <Link to="/blog" className={getLinkClass('/blog')} onClick={() => setMobileOpen(false)}>Blog</Link>
             <Link to="/campaigns" className={getLinkClass('/campaigns')} onClick={() => setMobileOpen(false)}>Campaigns</Link>
+            <Link to="/store" className={getLinkClass('/store')} onClick={() => setMobileOpen(false)}>Store</Link>
             <Link to="/donate" className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-semibold hover:from-red-600 hover:to-pink-600 transition shadow-lg" onClick={() => setMobileOpen(false)}>Donate</Link>
             <Link to="/contact" className="bg-white text-black px-6 py-2 rounded-full text-sm font-semibold hover:bg-opacity-90 transition" onClick={() => setMobileOpen(false)}>Contact Us</Link>
           </div>
