@@ -6,6 +6,9 @@ import { Blog } from './pages/Blog';
 import { BlogPost } from './pages/BlogPost';
 import { Donate } from './pages/Donate';
 import { Contact } from './pages/Contact';
+import { Campaigns } from './pages/Campaigns';
+import { ChurchesBuilt } from './pages/campaigns/ChurchesBuilt';
+import { PeopleReached } from './pages/campaigns/PeopleReached';
 
 const paypalOptions = {
   clientId: import.meta.env.VITE_PAYPAL_CLIENT_ID || '',
@@ -24,6 +27,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/campaigns" element={<Campaigns />} />
+            <Route path="/campaigns/churches" element={<ChurchesBuilt />} />
+            <Route path="/campaigns/people" element={<PeopleReached />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

@@ -4,7 +4,6 @@ import { Calendar, ArrowLeft } from 'lucide-react';
 import { getAllPosts } from '../utils/getAllPosts';
 import ReactMarkdown from 'react-markdown';
 import { Post } from '../types/post';
-import './blog-post.css'
 import rehypeRaw from 'rehype-raw';
 
 export const BlogPost = () => {

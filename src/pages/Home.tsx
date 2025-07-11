@@ -225,7 +225,7 @@ export const Home = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-12 text-center">Our Campaigns</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div className="bg-zinc-900 rounded-lg p-8 text-center">
               <Church className="w-12 h-12 mx-auto mb-6" />
               <h3 className="text-2xl font-bold mb-4">Churches Built</h3>
@@ -250,6 +250,14 @@ export const Home = () => {
                 <div className="bg-white h-full rounded-full" style={{ width: '10%' }}></div>
               </div>
             </div>
+          </div>
+          <div className="flex justify-center">
+            <a
+              href="/campaigns"
+              className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full text-lg font-semibold transition shadow-lg"
+            >
+              View All Campaigns
+            </a>
           </div>
         </div>
       </section>
@@ -307,7 +315,7 @@ export const Home = () => {
               className="w-full h-80 object-cover rounded-lg"
             />
             <img 
-              src="/IMG_2894.JPG" 
+              src="/brazil-crowd.jpg" 
               alt="Event highlight" 
               className="w-full h-80 object-cover rounded-lg"
             />
