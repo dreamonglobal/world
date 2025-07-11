@@ -182,9 +182,9 @@ export const Home = () => {
           </div>
 
           <h2 className="text-4xl font-bold mb-12 text-center">Dream Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 gap-y-12">
             {team.map((member) => (
-              <div className="text-center">
+              <div className="text-center" key={member.name}>
                 <img 
                   src={member.image} 
                   alt={member.name} 
@@ -299,66 +299,27 @@ export const Home = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-12 text-center">Event Highlights</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <img 
-              src="/8B9BE75B-381B-4EFB-AC5F-956D6CB60E7D.jpg" 
-              alt="Event highlight" 
-              className="w-full h-80 object-cover rounded-lg"
-            />
-            <img 
-              src="/C40BE7A8-BC9E-421A-95FB-7AD2E9DBEE60.jpg" 
-              alt="Event highlight" 
-              className="w-full h-80 object-cover rounded-lg"
-            />
-            <img 
-              src="/257981597_4457173604336167_2647571049329824794_n.jpg" 
-              alt="Event highlight" 
-              className="w-full h-80 object-cover rounded-lg"
-            />
-            <img 
-              src="/brazil-crowd.jpg" 
-              alt="Event highlight" 
-              className="w-full h-80 object-cover rounded-lg"
-            />
-            <img 
-              src="/IMG_4856.JPG" 
-              alt="Event highlight" 
-              className="w-full h-80 object-cover rounded-lg"
-            />
-            <img 
-              src="/4CFC8C2C-2603-456A-AC43-52770CC20810.jpg" 
-              alt="Event highlight" 
-              className="w-full h-80 object-cover rounded-lg"
-            />
-            <img 
-              src="/DSCF0725.JPG" 
-              alt="Event highlight" 
-              className="w-full h-80 object-cover rounded-lg"
-            />
-            <img 
-              src="/09C37E7D-6C57-4AA6-A3B9-7E1DAFB22003.jpg" 
-              alt="Event highlight" 
-              className="w-full h-80 object-cover rounded-lg"
-            />
-            <img 
-              src="/IMG_4965.jpeg" 
-              alt="Event highlight" 
-              className="w-full h-80 object-cover rounded-lg"
-            />
-            <img 
-              src="/DSCF1695 copy.jpg" 
-              alt="Event highlight" 
-              className="w-full h-80 object-cover rounded-lg"
-            />
-            <img 
-              src="/DSCF1302.JPG" 
-              alt="Event highlight" 
-              className="w-full h-80 object-cover rounded-lg"
-            />
-            <img 
-              src="/IMG_0453.jpeg" 
-              alt="Event highlight" 
-              className="w-full h-80 object-cover rounded-lg"
-            />
+            {[
+              "/8B9BE75B-381B-4EFB-AC5F-956D6CB60E7D.jpg",
+              "/C40BE7A8-BC9E-421A-95FB-7AD2E9DBEE60.jpg",
+              "/257981597_4457173604336167_2647571049329824794_n.jpg",
+              "/brazil-crowd.jpg",
+              "/IMG_4856.JPG",
+              "/4CFC8C2C-2603-456A-AC43-52770CC20810.jpg",
+              "/DSCF0725.JPG",
+              "/09C37E7D-6C57-4AA6-A3B9-7E1DAFB22003.jpg",
+              "/IMG_4965.jpeg",
+              "/DSCF1695 copy.jpg",
+              "/DSCF1302.JPG",
+              "/IMG_0453.jpeg"
+            ].map((src) => (
+              <img
+                key={src}
+                src={src}
+                alt="Event highlight"
+                className="w-full h-80 object-cover rounded-lg"
+              />
+            ))}
           </div>
         </div>
       </section>
