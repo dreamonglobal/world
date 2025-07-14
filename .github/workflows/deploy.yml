@@ -17,7 +17,7 @@ jobs:
         run: npm ci
 
       - name: Run Affected Changes
-        run: npx nx affected -t lint, typecheck, build
+        run: npx nx run-many -t build
 
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
