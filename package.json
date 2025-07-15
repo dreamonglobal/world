@@ -23,7 +23,7 @@
     "rehype-raw": "^7.0.0",
     "remark-breaks": "^4.0.0",
     "remark-gfm": "^4.0.1",
-    "vite-plugin-zephyr": "^0.0.52"
+    "vite-plugin-zephyr": "^0.0.56"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
