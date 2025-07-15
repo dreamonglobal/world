@@ -12,6 +12,7 @@ import { PeopleReached } from './pages/campaigns/PeopleReached';
 
 const paypalOptions = {
   clientId: import.meta.env.VITE_PAYPAL_CLIENT_ID || '',
+  clientSecret: import.meta.env.VITE_PAYPAL_CLIENT_SECRET || '',
   currency: 'USD',
   intent: 'capture',
   vault: true
