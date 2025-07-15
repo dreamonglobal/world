@@ -7,17 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # Fetch all history and branches
-          filter: tree:0
-      - name: Set SHAs
-        uses: nrwl/nx-set-shas@v4
 
       - name: Install Dependencies
         run: npm ci
 
       - name: Run Affected Changes
-        run: npx nx run-many -t build
+        run: npx nx build
 
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
