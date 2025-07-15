@@ -5,13 +5,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      PAYPAL_CLIENT_ID: ${{ secrets.PAYPAL_CLIENT_ID }}
+      PAYPAL_CLIENT_SECRET: ${{ secrets.PAYPAL_CLIENT_SECRET }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Install Dependencies
-        run: npm ci
+      - name: Install dependencies
+        run: npm install
 
-      - name: Run Affected Changes
+      - name: Build
         run: npx nx build
 
       - name: Upload ftp
