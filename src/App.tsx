@@ -11,7 +11,7 @@ import { ChurchesBuilt } from './pages/campaigns/ChurchesBuilt';
 import { PeopleReached } from './pages/campaigns/PeopleReached';
 
 const paypalOptions = {
-  clientId: import.meta.env.VITE_PAYPAL_CLIENT_ID || '',
+  clientId: 'Ac00x0zRyN1kl1H-8Im6Xue2kdGHsVXkDfORzEOGV0DxUzaMv8ui1TfBCmTjI2Z6ohWnO3JQnTZT__2P',
   currency: 'USD',
   intent: 'capture',
   vault: true
