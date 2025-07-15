@@ -24,8 +24,8 @@ export const Navigation = () => {
           >
             Home
           </Link>
-          <Link to="/blog" className={getLinkClass('/blog')}>Blog</Link>
           <Link to="/campaigns" className={getLinkClass('/campaigns')}>Campaigns</Link>
+          <Link to="/blog" className={getLinkClass('/blog')}>Blog</Link>
           <div className="flex items-center gap-4">
             <Link 
               to="/donate"
