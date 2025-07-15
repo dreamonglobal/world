@@ -17,11 +17,17 @@ jobs:
       - name: Build
         run: npx nx build --skip-nx-cache
 
+      - name: Download global public dir
+        uses: actions/download-artifact@v4
+        with:
+          name: global
+          path: dist/
+
       - name: Upload ftp
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: 'dist/'
+          local-dir: 'global/'
           server-dir: 'public_html/'
