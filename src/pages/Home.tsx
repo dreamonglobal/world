@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Heart, Globe2, Church, Users2, Megaphone } from 'lucide-react';
+import { MapPin, Users, Heart, Globe2, Church, Users2, Megaphone } from 'lucide-react';
 import Globe from 'react-globe.gl';
 import { NewsletterSignup } from '../components/NewsletterSignup';
 
