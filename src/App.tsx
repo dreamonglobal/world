@@ -9,6 +9,7 @@ import { Contact } from './pages/Contact';
 import { Campaigns } from './pages/Campaigns';
 import { ChurchesBuilt } from './pages/campaigns/ChurchesBuilt';
 import { PeopleReached } from './pages/campaigns/PeopleReached';
+import { Missions } from './pages/Missions';
 
 const paypalOptions = {
   clientId: 'Ac00x0zRyN1kl1H-8Im6Xue2kdGHsVXkDfORzEOGV0DxUzaMv8ui1TfBCmTjI2Z6ohWnO3JQnTZT__2P',
@@ -30,6 +31,7 @@ function App() {
             <Route path="/campaigns" element={<Campaigns />} />
             <Route path="/campaigns/churches" element={<ChurchesBuilt />} />
             <Route path="/campaigns/people" element={<PeopleReached />} />
+            <Route path="/missions" element={<Missions />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
