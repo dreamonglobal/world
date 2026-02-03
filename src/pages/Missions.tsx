@@ -18,6 +18,8 @@ const upcomingTrips = [
     cta: 'Support This Trip',
     ctaLink: '/donate',
     blogLink: '/blog/pakistan-2026-answering-the-call',
+    fundingCurrent: 36500,
+    fundingGoal: 39500,
   },
   {
     id: 'honduras-2026',
@@ -35,6 +37,8 @@ const upcomingTrips = [
     cta: 'Sign Up Now',
     ctaLink: 'https://dreamon.gomethod.app/!/56456/honduras-coffee-missions-trip',
     external: true,
+    fundingCurrent: 0,
+    fundingGoal: 10000,
   },
   {
     id: 'brazil-2026',
@@ -51,8 +55,8 @@ const upcomingTrips = [
     ],
     cta: 'Partner With Us',
     ctaLink: '/donate',
-    fundingGoal: 20000,
-    fundingNote: 'Help us raise $20,000 by May 1st',
+    fundingCurrent: 35000,
+    fundingGoal: 75000,
   },
 ];
 
@@ -103,12 +107,28 @@ export const Missions = () => {
                       ))}
                     </div>
 
-                    {trip.fundingNote && (
-                      <div className="bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-lg p-4 mb-4">
-                        <p className="text-red-400 font-semibold flex items-center gap-2">
-                          <Heart className="w-5 h-5" />
-                          {trip.fundingNote}
-                        </p>
+                    {trip.fundingGoal && (
+                      <div className="bg-zinc-800/50 rounded-lg p-4 mb-4">
+                        <div className="flex justify-between items-center mb-2">
+                          <span className="text-sm text-zinc-400">Funding Progress</span>
+                          <span className="text-sm font-semibold">
+                            ${trip.fundingCurrent?.toLocaleString()} of ${trip.fundingGoal.toLocaleString()}
+                          </span>
+                        </div>
+                        <div className="w-full bg-zinc-700 rounded-full h-3 overflow-hidden">
+                          <div 
+                            className="h-full bg-gradient-to-r from-red-500 to-pink-500 rounded-full transition-all duration-500"
+                            style={{ width: `${Math.min(100, ((trip.fundingCurrent || 0) / trip.fundingGoal) * 100)}%` }}
+                          />
+                        </div>
+                        <div className="flex justify-between items-center mt-2">
+                          <span className="text-xs text-zinc-500">
+                            {Math.round(((trip.fundingCurrent || 0) / trip.fundingGoal) * 100)}% funded
+                          </span>
+                          <span className="text-xs text-red-400 font-medium">
+                            ${(trip.fundingGoal - (trip.fundingCurrent || 0)).toLocaleString()} still needed
+                          </span>
+                        </div>
                       </div>
                     )}
 
