@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { MapPin, Users, Heart, Globe2, Church, Users2, Megaphone } from 'lucide-react';
 import Globe from 'react-globe.gl';
+import { NewsletterSignup } from '../components/NewsletterSignup';
 
 const locations = [
   { 
@@ -469,11 +470,14 @@ export const Home = () => {
         </div>
       </section>
 
+      {/* Newsletter Signup */}
+      <NewsletterSignup />
+
       {/* Footer */}
       <footer className="py-12 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <p className="text-zinc-400 mt-6">© 2025 Dream On World. All rights reserved.</p>
+            <p className="text-zinc-400 mt-6">© 2026 Dream On World. All rights reserved.</p>
           </div>
         </div>
       </footer>
