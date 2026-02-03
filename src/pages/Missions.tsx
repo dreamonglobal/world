@@ -1,4 +1,4 @@
-import { Globe2, Calendar, MapPin, ExternalLink, Heart } from 'lucide-react';
+import { Globe2, Calendar, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const upcomingTrips = [
