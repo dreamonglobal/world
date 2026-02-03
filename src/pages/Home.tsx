@@ -178,56 +178,110 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Brazil Fundraising Banner */}
-      <section className="py-16 bg-gradient-to-r from-green-900 via-green-800 to-yellow-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('/brazil-crowd.jpg')] bg-cover bg-center" />
-        </div>
-        <div className="container mx-auto px-4 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-yellow-500 text-black px-4 py-1 rounded-full text-sm font-bold mb-4">
-              🇧🇷 MAY 2026 CRUSADE
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Help Us Get to Brazil</h2>
-            <p className="text-xl text-zinc-200 mb-8 max-w-2xl mx-auto">
-              We're believing for thousands to encounter Jesus. Join us in bringing the Gospel to Brazil through worship, youth conferences, and life-changing ministry.
-            </p>
-            
-            {/* Funding Progress */}
-            <div className="bg-black/30 backdrop-blur-sm rounded-xl p-6 mb-8 max-w-xl mx-auto">
-              <div className="flex justify-between items-center mb-3">
-                <span className="text-lg font-semibold">Funding Progress</span>
-                <span className="text-2xl font-bold text-yellow-400">$35,000 <span className="text-zinc-400 text-lg font-normal">/ $75,000</span></span>
+      {/* Mission Fundraising Banner - Shows Pakistan until Feb 17, then Brazil */}
+      {new Date() < new Date('2026-02-17') ? (
+        /* Pakistan Banner - Trip is next week! */
+        <section className="py-16 bg-gradient-to-r from-green-900 via-emerald-800 to-green-900 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 left-0 w-full h-full bg-[url('/pakistan-mission.jpg')] bg-cover bg-center" />
+          </div>
+          <div className="container mx-auto px-4 relative">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="inline-block bg-white text-green-900 px-4 py-1 rounded-full text-sm font-bold mb-4 animate-pulse">
+                🇵🇰 LEAVING NEXT WEEK
               </div>
-              <div className="w-full bg-zinc-700 rounded-full h-4 mb-3 overflow-hidden">
-                <div 
-                  className="h-full bg-gradient-to-r from-yellow-500 to-yellow-400 rounded-full transition-all duration-1000"
-                  style={{ width: '47%' }}
-                />
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Help Us Get to Pakistan</h2>
+              <p className="text-xl text-zinc-200 mb-8 max-w-2xl mx-auto">
+                We're days away from a historic mission — a crusade in Karachi, visiting wells we built, and praying in Parliament. Help us finish strong!
+              </p>
+              
+              {/* Funding Progress */}
+              <div className="bg-black/30 backdrop-blur-sm rounded-xl p-6 mb-8 max-w-xl mx-auto">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-lg font-semibold">Funding Progress</span>
+                  <span className="text-2xl font-bold text-white">$36,500 <span className="text-zinc-400 text-lg font-normal">/ $39,500</span></span>
+                </div>
+                <div className="w-full bg-zinc-700 rounded-full h-4 mb-3 overflow-hidden">
+                  <div 
+                    className="h-full bg-gradient-to-r from-white to-zinc-300 rounded-full transition-all duration-1000"
+                    style={{ width: '92%' }}
+                  />
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-green-400 font-semibold">92% funded — Almost there!</span>
+                  <span className="text-white font-medium">$3,000 still needed</span>
+                </div>
               </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-green-400">47% funded</span>
-                <span className="text-yellow-400 font-medium">$40,000 still needed</span>
-              </div>
-            </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/donate"
-                className="bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-lg text-lg font-bold transition shadow-lg"
-              >
-                Give Toward Brazil
-              </a>
-              <a 
-                href="/missions"
-                className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold transition border border-white/30"
-              >
-                Learn More
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="/donate"
+                  className="bg-white hover:bg-zinc-100 text-green-900 px-8 py-4 rounded-lg text-lg font-bold transition shadow-lg"
+                >
+                  Help Us Finish Strong
+                </a>
+                <a 
+                  href="/blog/pakistan-2026-answering-the-call"
+                  className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold transition border border-white/30"
+                >
+                  Read Our Story
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : (
+        /* Brazil Banner - Shows after Pakistan trip */
+        <section className="py-16 bg-gradient-to-r from-green-900 via-green-800 to-yellow-900 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 left-0 w-full h-full bg-[url('/brazil-crowd.jpg')] bg-cover bg-center" />
+          </div>
+          <div className="container mx-auto px-4 relative">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="inline-block bg-yellow-500 text-black px-4 py-1 rounded-full text-sm font-bold mb-4">
+                🇧🇷 MAY 2026 CRUSADE
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Help Us Get to Brazil</h2>
+              <p className="text-xl text-zinc-200 mb-8 max-w-2xl mx-auto">
+                We're believing for thousands to encounter Jesus. Join us in bringing the Gospel to Brazil through worship, youth conferences, and life-changing ministry.
+              </p>
+              
+              {/* Funding Progress */}
+              <div className="bg-black/30 backdrop-blur-sm rounded-xl p-6 mb-8 max-w-xl mx-auto">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-lg font-semibold">Funding Progress</span>
+                  <span className="text-2xl font-bold text-yellow-400">$35,000 <span className="text-zinc-400 text-lg font-normal">/ $75,000</span></span>
+                </div>
+                <div className="w-full bg-zinc-700 rounded-full h-4 mb-3 overflow-hidden">
+                  <div 
+                    className="h-full bg-gradient-to-r from-yellow-500 to-yellow-400 rounded-full transition-all duration-1000"
+                    style={{ width: '47%' }}
+                  />
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-green-400">47% funded</span>
+                  <span className="text-yellow-400 font-medium">$40,000 still needed</span>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="/donate"
+                  className="bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-lg text-lg font-bold transition shadow-lg"
+                >
+                  Give Toward Brazil
+                </a>
+                <a 
+                  href="/missions"
+                  className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold transition border border-white/30"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* About & Team Section */}
       <section id="our-story" className="py-20 bg-zinc-900">
