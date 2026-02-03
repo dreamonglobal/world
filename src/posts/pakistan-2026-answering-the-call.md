@@ -3,7 +3,7 @@ id: 4
 title: "Answering the Call: Dream On Goes to Pakistan"
 date: "February 2026"
 category: "Pakistan"
-image: "/church-building.jpg"
+image: "/pakistan-mission.jpg"
 ---
 
 For years, we've sensed the Holy Spirit stirring something in our hearts—an anticipation that He would soon ask us to step into something new. We didn't know what it would look like or where it would take us, but we knew He was preparing us.
