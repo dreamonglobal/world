@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send } from 'lucide-react';
+import { Send, Mail } from 'lucide-react';
 import emailjs from 'emailjs-com';
 
 export const Contact = () => {
@@ -124,6 +124,20 @@ export const Contact = () => {
               <p className="text-red-500 text-center mt-4">There was an error sending your message. Please try again later.</p>
             )}
           </form>
+
+          <div className="mt-16 pt-8 border-t border-zinc-800">
+            <h2 className="text-2xl font-bold mb-4">Contact the Board of Directors</h2>
+            <p className="text-zinc-400 mb-4">
+              Have questions or want to reach out to our Board of Directors directly?
+            </p>
+            <a 
+              href="mailto:board@dreamon.world" 
+              className="inline-flex items-center gap-2 text-red-500 hover:text-red-400 transition"
+            >
+              <Mail className="w-5 h-5" />
+              board@dreamon.world
+            </a>
+          </div>
         </div>
       </div>
     </div>
