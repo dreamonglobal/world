@@ -60,6 +60,18 @@ const locations = [
       },
     ]
   },
+  { 
+    name: 'Pakistan',
+    lat: 30.3753,
+    lng: 69.3451,
+    initiatives: [
+      {
+        title: 'Pakistan',
+        description: "In 2026, Dream On is embarking on a historic mission to Pakistan. The trip includes a three-night evangelistic crusade in Karachi, a pastors and leaders conference, ministry in the brick kilns where families live in difficult conditions, and visiting water wells that Dream On helped build. The team will also have the incredible opportunity to visit Pakistan's Parliament to pray for the only Christian currently serving in their government. This mission represents a significant step in Dream On's global outreach, bringing hope and the Gospel to a region hungry for transformation.",
+        link: '/missions'
+      },
+    ]
+  },
 ];
 
 const team = [

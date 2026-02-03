@@ -44,30 +44,29 @@ export const Blog = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map(post => (
-            <article key={post.id} className="bg-zinc-900 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-transform">
-              <img 
-                src={post.image} 
-                alt={post.title} 
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <div className="flex items-center gap-2 text-sm text-zinc-400 mb-3">
-                  <Calendar className="w-4 h-4" />
-                  <span>{post.date}</span>
-                  <span className="bg-zinc-800 px-2 py-1 rounded-full text-xs">
-                    {post.category}
+            <Link key={post.id} to={`/blog/${post.slug}`} className="block">
+              <article className="bg-zinc-900 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-transform cursor-pointer">
+                <img 
+                  src={post.image} 
+                  alt={post.title} 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <div className="flex items-center gap-2 text-sm text-zinc-400 mb-3">
+                    <Calendar className="w-4 h-4" />
+                    <span>{post.date}</span>
+                    <span className="bg-zinc-800 px-2 py-1 rounded-full text-xs">
+                      {post.category}
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-bold mb-3">{post.title}</h2>
+                  <p className="text-zinc-400 mb-4">{getExcerpt(post.content)}</p>
+                  <span className="text-white font-semibold hover:text-zinc-300 transition inline-flex items-center">
+                    Read More →
                   </span>
                 </div>
-                <h2 className="text-xl font-bold mb-3">{post.title}</h2>
-                <p className="text-zinc-400 mb-4">{getExcerpt(post.content)}</p>
-                <Link 
-                  to={`/blog/${post.slug}`}
-                  className="text-white font-semibold hover:text-zinc-300 transition inline-flex items-center"
-                >
-                  Read More →
-                </Link>
-              </div>
-            </article>
+              </article>
+            </Link>
           ))}
         </div>
       </div>

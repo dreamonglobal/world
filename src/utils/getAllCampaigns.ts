@@ -25,5 +25,16 @@ export const getAllCampaigns = async (): Promise<Campaign[]> => {
       current: '200,000 People',
       slug: 'people',
     },
+    {
+      id: '3',
+      title: 'Water Wells',
+      description: 'Build wells in Pakistan for $500 each. Clean water + the Gospel!',
+      image: '/pakistan-well.jpg',
+      date: '2026-01-01',
+      progress: 0.01,
+      goal: '200 Wells',
+      current: '2 Wells',
+      slug: 'wells',
+    },
   ];
 }; 
