@@ -18,7 +18,7 @@ const upcomingTrips = [
     cta: 'Support This Trip',
     ctaLink: '/donate',
     blogLink: '/blog/pakistan-2026-answering-the-call',
-    fundingCurrent: 36500,
+    fundingCurrent: 38000,
     fundingGoal: 39500,
   },
   {
