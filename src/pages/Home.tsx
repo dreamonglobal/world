@@ -199,17 +199,17 @@ export const Home = () => {
               <div className="bg-black/30 backdrop-blur-sm rounded-xl p-6 mb-8 max-w-xl mx-auto">
                 <div className="flex justify-between items-center mb-3">
                   <span className="text-lg font-semibold">Funding Progress</span>
-                  <span className="text-2xl font-bold text-white">$36,500 <span className="text-zinc-400 text-lg font-normal">/ $39,500</span></span>
+                  <span className="text-2xl font-bold text-white">$38,000 <span className="text-zinc-400 text-lg font-normal">/ $39,500</span></span>
                 </div>
                 <div className="w-full bg-zinc-700 rounded-full h-4 mb-3 overflow-hidden">
                   <div 
                     className="h-full bg-gradient-to-r from-white to-zinc-300 rounded-full transition-all duration-1000"
-                    style={{ width: '92%' }}
+                    style={{ width: '96%' }}
                   />
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-green-400 font-semibold">92% funded — Almost there!</span>
-                  <span className="text-white font-medium">$3,000 still needed</span>
+                  <span className="text-green-400 font-semibold">96% funded — Almost there!</span>
+                  <span className="text-white font-medium">$1,500 still needed</span>
                 </div>
               </div>
 
