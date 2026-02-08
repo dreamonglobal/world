@@ -2,6 +2,13 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {
     "build": {
+      "inputs": [
+        "default",
+        "{projectRoot}/public/**/*",
+        "{projectRoot}/src/**/*",
+        "{projectRoot}/index.html",
+        "{projectRoot}/vite.config.ts"
+      ],
       "outputs": [
         "{projectRoot}/dist"
       ],
