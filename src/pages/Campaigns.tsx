@@ -25,9 +25,10 @@ export const Campaigns = () => {
               onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') navigate(`/campaigns/${campaign.slug}`); }}
               aria-label={`View details for ${campaign.title}`}
             >
-              <img 
-                src={campaign.image} 
-                alt={campaign.title} 
+              <img
+                src={campaign.image}
+                alt={campaign.title}
+                loading="lazy"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">

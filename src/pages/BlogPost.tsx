@@ -5,6 +5,7 @@ import { getAllPosts } from '../utils/getAllPosts';
 import ReactMarkdown from 'react-markdown';
 import { Post } from '../types/post';
 import rehypeRaw from 'rehype-raw';
+import { JsonLd, createArticleSchema } from '../components/JsonLd';
 
 export const BlogPost = () => {
   const { slug } = useParams();
@@ -32,12 +33,13 @@ export const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-black text-white pt-32">
+      <JsonLd data={createArticleSchema({ title: post.title, date: post.date, slug: post.slug, image: post.image, content: post.content })} />
       <div className="container mx-auto px-4">
         <Link to="/blog" className="text-white hover:text-zinc-300 transition inline-flex items-center gap-2 mb-8">
           <ArrowLeft className="w-5 h-5" />
           Back to Blog
         </Link>
-        
+
         <article className="bg-white pb-24">
           <img 
             src={post.image} 

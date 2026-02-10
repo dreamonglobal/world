@@ -88,17 +88,17 @@ export const ChurchesBuilt = () => {
               <img 
                 src="/church-building.jpg" 
                 alt="Church building exterior" 
-                className="w-full h-48 object-cover rounded-lg"
+                loading="lazy" className="w-full h-48 object-cover rounded-lg"
               />
                 <img 
                   src="/IMG_4965.jpeg" 
                   alt="Church serving community" 
-                  className="w-full h-48 object-cover rounded-lg"
+                  loading="lazy" className="w-full h-48 object-cover rounded-lg"
                 />
               <img 
                 src="/257981597_4457173604336167_2647571049329824794_n.jpg" 
                 alt="Church interior worship" 
-                className="w-full h-48 object-cover rounded-lg"
+                loading="lazy" className="w-full h-48 object-cover rounded-lg"
               />
             </div>
 
@@ -108,7 +108,7 @@ export const ChurchesBuilt = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="/donate"
+                href="/donate?campaign=churches"
                 className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full text-center font-semibold transition no-underline"
               >
                 Donate Now

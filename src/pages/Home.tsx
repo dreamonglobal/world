@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { MapPin, Users, Heart, Globe2, Church, Users2, Megaphone } from 'lucide-react';
 import Globe from 'react-globe.gl';
+import { JsonLd, organizationSchema } from '../components/JsonLd';
+import { NewsletterSignup } from '../components/NewsletterSignup';
 
 const locations = [
   { 
@@ -153,6 +155,8 @@ export const Home = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      <JsonLd data={organizationSchema} />
+
       {/* Hero Section */}
       <section className="relative h-screen">
         <div className="absolute inset-0">
@@ -302,9 +306,10 @@ export const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 gap-y-12">
             {team.map((member) => (
               <div className="text-center" key={member.name}>
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  loading="lazy"
                   className="w-32 h-32 object-cover rounded-full mx-auto mb-4"
                 />
                 <h3 className="text-xl font-bold mb-2">{member.name}</h3>
@@ -417,23 +422,24 @@ export const Home = () => {
           <h2 className="text-4xl font-bold mb-12 text-center">Event Highlights</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              "/8B9BE75B-381B-4EFB-AC5F-956D6CB60E7D.jpg",
-              "/C40BE7A8-BC9E-421A-95FB-7AD2E9DBEE60.jpg",
-              "/257981597_4457173604336167_2647571049329824794_n.jpg",
-              "/brazil-crowd.jpg",
-              "/IMG_4856.JPG",
-              "/4CFC8C2C-2603-456A-AC43-52770CC20810.jpg",
-              "/DSCF0725.JPG",
-              "/09C37E7D-6C57-4AA6-A3B9-7E1DAFB22003.jpg",
-              "/IMG_4965.jpeg",
-              "/DSCF1695 copy.jpg",
-              "/DSCF1302.JPG",
-              "/IMG_0453.jpeg"
-            ].map((src) => (
+              { src: "/8B9BE75B-381B-4EFB-AC5F-956D6CB60E7D.jpg", alt: "Crusade event with crowd worship" },
+              { src: "/C40BE7A8-BC9E-421A-95FB-7AD2E9DBEE60.jpg", alt: "Worship session during crusade" },
+              { src: "/257981597_4457173604336167_2647571049329824794_n.jpg", alt: "Church worship gathering" },
+              { src: "/brazil-crowd.jpg", alt: "Brazil crusade community event" },
+              { src: "/IMG_4856.JPG", alt: "Youth conference worship" },
+              { src: "/4CFC8C2C-2603-456A-AC43-52770CC20810.jpg", alt: "Prayer and worship session" },
+              { src: "/DSCF0725.JPG", alt: "Mission trip outreach event" },
+              { src: "/09C37E7D-6C57-4AA6-A3B9-7E1DAFB22003.jpg", alt: "Community outreach highlights" },
+              { src: "/IMG_4965.jpeg", alt: "Church community service" },
+              { src: "/DSCF1695 copy.jpg", alt: "Evangelistic crusade event" },
+              { src: "/DSCF1302.JPG", alt: "Mission trip team ministry" },
+              { src: "/IMG_0453.jpeg", alt: "Community gathering and worship" },
+            ].map((img) => (
               <img
-                key={src}
-                src={src}
-                alt="Event highlight"
+                key={img.src}
+                src={img.src}
+                alt={img.alt}
+                loading="lazy"
                 className="w-full h-80 object-cover rounded-lg"
               />
             ))}
@@ -459,15 +465,19 @@ export const Home = () => {
               </a>
             </div>
             <div className="rounded-lg overflow-hidden">
-              <img 
-                src="/IMG_4353.jpg" 
-                alt="Making a difference" 
+              <img
+                src="/IMG_4353.jpg"
+                alt="Making a difference"
+                loading="lazy"
                 className="w-full h-[500px] object-cover"
               />
             </div>
           </div>
         </div>
       </section>
+
+      {/* Newsletter Signup */}
+      <NewsletterSignup />
 
     </div>
   );

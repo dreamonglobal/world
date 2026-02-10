@@ -22,8 +22,9 @@ export const WellsBuilt = () => {
         {/* Hero Image */}
         <div className="rounded-xl overflow-hidden mb-8">
           <img 
-            src="/pakistan-well.jpg" 
-            alt="Water well in Pakistan" 
+            src="/pakistan-well.jpg"
+            alt="Water well in Pakistan"
+            loading="lazy"
             className="w-full h-64 md:h-96 object-cover"
           />
         </div>
@@ -119,7 +120,7 @@ export const WellsBuilt = () => {
               $500 provides clean water and shares the Gospel with an entire village.
             </p>
             <Link
-              to="/donate"
+              to="/donate?campaign=wells"
               className="bg-gradient-to-r from-blue-500 to-blue-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-500 transition inline-block"
             >
               Give Toward a Well

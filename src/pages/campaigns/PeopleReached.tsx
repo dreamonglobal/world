@@ -88,32 +88,32 @@ export const PeopleReached = () => {
               <img 
                 src="/8B9BE75B-381B-4EFB-AC5F-956D6CB60E7D.jpg" 
                 alt="Crusade event crowd" 
-                className="w-full h-48 object-cover rounded-lg"
+                loading="lazy" className="w-full h-48 object-cover rounded-lg"
               />
               <img 
                 src="/C40BE7A8-BC9E-421A-95FB-7AD2E9DBEE60.jpg" 
                 alt="Worship session" 
-                className="w-full h-48 object-cover rounded-lg"
+                loading="lazy" className="w-full h-48 object-cover rounded-lg"
               />
               <img 
                 src="/brazil-crowd.jpg" 
                 alt="Community outreach" 
-                className="w-full h-48 object-cover rounded-lg"
+                loading="lazy" className="w-full h-48 object-cover rounded-lg"
               />
               <img 
                 src="/09C37E7D-6C57-4AA6-A3B9-7E1DAFB22003.jpg" 
                 alt="Mission trip highlights" 
-                className="w-full h-48 object-cover rounded-lg"
+                loading="lazy" className="w-full h-48 object-cover rounded-lg"
               />
               <img 
                 src="/IMG_4856.JPG" 
                 alt="Youth conference" 
-                className="w-full h-48 object-cover rounded-lg"
+                loading="lazy" className="w-full h-48 object-cover rounded-lg"
               />
               <img 
                 src="/4CFC8C2C-2603-456A-AC43-52770CC20810.jpg" 
                 alt="Prayer and worship" 
-                className="w-full h-48 object-cover rounded-lg"
+                loading="lazy" className="w-full h-48 object-cover rounded-lg"
               />
             </div>
 
@@ -123,7 +123,7 @@ export const PeopleReached = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="/donate"
+                href="/donate?campaign=people"
                 className="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full text-center font-semibold transition no-underline"
               >
                 Donate Now

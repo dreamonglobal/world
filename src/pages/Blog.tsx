@@ -46,9 +46,10 @@ export const Blog = () => {
           {posts.map(post => (
             <Link key={post.id} to={`/blog/${post.slug}`} className="block">
               <article className="bg-zinc-900 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-transform cursor-pointer">
-                <img 
-                  src={post.image} 
-                  alt={post.title} 
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  loading="lazy"
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">

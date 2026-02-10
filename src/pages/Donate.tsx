@@ -1,12 +1,50 @@
 import React, { useState } from 'react';
-import { Heart, CreditCard, Wallet } from 'lucide-react';
+import { Heart, CreditCard, Wallet, CheckCircle, Share2, ArrowLeft } from 'lucide-react';
 import { PayPalButtons } from '@paypal/react-paypal-js';
+import { Link, useSearchParams } from 'react-router-dom';
 import type { CreateOrderActions, CreateOrderData, CreateSubscriptionActions, OnApproveActions, OnApproveData } from '@paypal/paypal-js';
 
+const campaignContext: Record<string, { label: string; impact: string; color: string }> = {
+  wells: {
+    label: 'Water Wells in Pakistan',
+    impact: '$500 builds one well serving 500+ people with clean water and the Gospel',
+    color: 'text-blue-400',
+  },
+  churches: {
+    label: 'Churches Built',
+    impact: '$7,000 builds one church — a beacon of hope for an entire community',
+    color: 'text-red-400',
+  },
+  people: {
+    label: 'People Reached',
+    impact: '$20,000 funds one crusade reaching thousands with the Gospel',
+    color: 'text-red-400',
+  },
+  pakistan: {
+    label: 'Pakistan Mission Trip',
+    impact: 'Help fund a historic crusade in Karachi, pastors conference, and community outreach',
+    color: 'text-green-400',
+  },
+  brazil: {
+    label: 'Brazil Crusade',
+    impact: 'Help bring the Gospel to thousands through worship, conferences, and life-changing ministry',
+    color: 'text-yellow-400',
+  },
+};
+
 export const Donate = () => {
+  const [searchParams] = useSearchParams();
+  const campaign = searchParams.get('campaign');
+  const context = campaign ? campaignContext[campaign] : null;
+
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
   const [customAmount, setCustomAmount] = useState<string>('');
   const [isMonthly, setIsMonthly] = useState(false);
+  const [donationComplete, setDonationComplete] = useState<{
+    type: 'one-time' | 'monthly';
+    name?: string;
+    subscriptionId?: string;
+  } | null>(null);
 
   const handleAmountSelect = (amount: number) => {
     setSelectedAmount(amount);
@@ -43,6 +81,59 @@ export const Donate = () => {
     }
   };
 
+  if (donationComplete) {
+    return (
+      <div className="min-h-screen bg-black text-white pt-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center py-20">
+            <CheckCircle className="w-20 h-20 text-green-500 mx-auto mb-6" />
+            <h1 className="text-4xl font-bold mb-4">Thank You!</h1>
+            <p className="text-xl text-zinc-300 mb-2">
+              {donationComplete.type === 'one-time'
+                ? `Your generous gift makes an eternal impact${donationComplete.name ? `, ${donationComplete.name}` : ''}.`
+                : 'Your monthly partnership will help transform lives around the world.'}
+            </p>
+            <p className="text-zinc-400 mb-8">
+              Your donation is tax-deductible. Dream On World is a registered 501(c)(3) nonprofit.
+            </p>
+
+            <div className="bg-zinc-900 rounded-xl p-6 mb-8 text-left">
+              <h3 className="font-semibold mb-3">What your gift makes possible:</h3>
+              <ul className="text-zinc-300 space-y-2 text-sm">
+                <li>$500 builds a water well serving 500+ people in Pakistan</li>
+                <li>$7,000 builds a church for an entire community</li>
+                <li>$20,000 funds a crusade reaching thousands</li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={() => {
+                  navigator.share?.({
+                    title: 'Dream On World',
+                    text: 'I just donated to Dream On World! Join me in transforming lives.',
+                    url: 'https://dreamon.world/donate',
+                  }).catch(() => {});
+                }}
+                className="inline-flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 text-white px-6 py-3 rounded-lg transition"
+              >
+                <Share2 className="w-4 h-4" />
+                Share With Friends
+              </button>
+              <Link
+                to="/"
+                className="inline-flex items-center gap-2 border border-zinc-700 hover:bg-zinc-900 text-white px-6 py-3 rounded-lg transition"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Back to Home
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-black text-white pt-24">
       <div className="container mx-auto px-4">
@@ -52,17 +143,26 @@ export const Donate = () => {
             <h1 className="text-4xl font-bold mb-4">Support Our Mission</h1>
             <p className="text-xl text-zinc-400">
               Your generosity helps us continue building hope and transforming lives around the world.
-              <br />
-              <br />
+            </p>
 
-              You can mail a check to:
-              <br />
-              <br />
-              Dream On: Global
-              <br />
-              830 Glynwood Road
-              <br />
-              Wapakoneta, Ohio 45895
+            {context && (
+              <div className="mt-6 bg-zinc-900 border border-zinc-700 rounded-xl p-6 text-left">
+                <p className="text-sm text-zinc-400 mb-1">You're giving toward:</p>
+                <p className={`text-lg font-semibold ${context.color}`}>{context.label}</p>
+                <p className="text-zinc-300 text-sm mt-2">{context.impact}</p>
+              </div>
+            )}
+
+            <div className="mt-6 text-zinc-400 text-sm">
+              <p>You can also mail a check to:</p>
+              <p className="mt-1">Dream On: Global &middot; 830 Glynwood Road &middot; Wapakoneta, Ohio 45895</p>
+            </div>
+          </div>
+
+          {/* Transparency Banner */}
+          <div className="bg-green-900/20 border border-green-800/30 rounded-lg p-4 mb-6 text-center">
+            <p className="text-green-400 text-sm font-medium">
+              95% of every dollar goes directly to the mission. Only 5% is retained for operations.
             </p>
           </div>
 
@@ -115,7 +215,10 @@ export const Donate = () => {
                       onApprove={async (_data: OnApproveData, actions: OnApproveActions) => {
                         if (!actions.order) return;
                         const details = await actions.order.capture();
-                        alert("Transaction completed by " + (details.payer?.name?.given_name ?? "Donor"));
+                        setDonationComplete({
+                          type: 'one-time',
+                          name: details.payer?.name?.given_name,
+                        });
                       }}
                     />
                   </div>
@@ -156,7 +259,10 @@ export const Donate = () => {
                         });
                       }}
                       onApprove={async (data: OnApproveData) => {
-                        alert("You have successfully created subscription " + (data.subscriptionID ?? "(no ID returned)"));
+                        setDonationComplete({
+                          type: 'monthly',
+                          subscriptionId: data.subscriptionID,
+                        });
                       }}
                     />
                   </div>
