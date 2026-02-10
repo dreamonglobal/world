@@ -16,15 +16,15 @@ export const Contact = () => {
     setStatus('idle');
     try {
       await emailjs.send(
-        'service_vean38o', // replace with your EmailJS service ID
-        'template_dwruslz', // replace with your EmailJS template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: formData.name,
           from_email: formData.email,
           subject: formData.subject,
           message: formData.message,
         },
-        'ELu74JndWaqVnb15i' // replace with your EmailJS public key
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
       setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });

@@ -469,14 +469,6 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 bg-black">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <p className="text-zinc-400 mt-6">© 2025 Dream On World. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
