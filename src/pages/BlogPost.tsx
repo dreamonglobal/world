@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import { Post } from '../types/post';
 import rehypeRaw from 'rehype-raw';
 import { JsonLd, createArticleSchema } from '../components/JsonLd';
+import { ShareButtons } from '../components/ShareButtons';
 
 export const BlogPost = () => {
   const { slug } = useParams();
@@ -46,12 +47,15 @@ export const BlogPost = () => {
             alt={post.title} 
             className="w-full h-96 object-cover mb-8"
           />
-          <div className="flex items-center gap-2 text-sm text-zinc-800 mb-4 px-4">
-            <Calendar className="w-4 h-4" />
-            <span>{post.date}</span>
-            <span className="bg-zinc-200 px-2 py-1 rounded-full text-xs">
-              {post.category}
-            </span>
+          <div className="flex items-center justify-between flex-wrap gap-4 text-sm text-zinc-800 mb-4 px-4">
+            <div className="flex items-center gap-2">
+              <Calendar className="w-4 h-4" />
+              <span>{post.date}</span>
+              <span className="bg-zinc-200 px-2 py-1 rounded-full text-xs">
+                {post.category}
+              </span>
+            </div>
+            <ShareButtons url={`/blog/${post.slug}`} title={post.title} />
           </div>
           <div className="prose prose-lg mx-auto">
             <h1 className="text-5xl font-bold mb-8">{post.title}</h1>

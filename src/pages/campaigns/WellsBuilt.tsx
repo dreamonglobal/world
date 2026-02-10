@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Droplets, Heart, MapPin, Book } from 'lucide-react';
+import { ShareButtons } from '../../components/ShareButtons';
 
 export const WellsBuilt = () => {
   const wellsBuilt = 2;
@@ -17,6 +18,9 @@ export const WellsBuilt = () => {
           <p className="text-xl text-zinc-400 text-center max-w-2xl">
             Bringing clean water and the Gospel to villages in Pakistan
           </p>
+          <div className="mt-4">
+            <ShareButtons url="/campaigns/wells" title="Water Wells - Dream On World" description="For just $500, you can build a well that transforms an entire village in Pakistan with clean water and the Gospel." />
+          </div>
         </div>
 
         {/* Hero Image */}
