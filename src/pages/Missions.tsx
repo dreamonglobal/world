@@ -3,25 +3,6 @@ import { Link } from 'react-router-dom';
 
 const upcomingTrips = [
   {
-    id: 'pakistan-2026',
-    country: 'Pakistan',
-    flag: '🇵🇰',
-    title: 'Pakistan Miracle Crusade',
-    date: 'February 2026',
-    description: 'Join us for a historic mission to Pakistan featuring a three-night evangelistic crusade in Karachi, pastors conference, and community outreach including visiting the wells we helped build.',
-    highlights: [
-      'Three-night evangelistic crusade',
-      'Pastors & leaders conference',
-      'Visit water wells we built',
-      'Parliament visit for prayer',
-    ],
-    cta: 'Support This Trip',
-    ctaLink: '/donate',
-    blogLink: '/blog/pakistan-2026-answering-the-call',
-    fundingCurrent: 39100,
-    fundingGoal: 39500,
-  },
-  {
     id: 'brazil-2026',
     country: 'Brazil',
     flag: '🇧🇷',
