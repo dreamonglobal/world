@@ -3,7 +3,7 @@ id: 5
 title: "Grateful for Pakistan... Believing for Brazil"
 date: "March 15, 2026"
 category: "Missions Update"
-image: "/pakistan-mission.jpg"
+image: "/blog/pakistan-recap/intro-1.jpg"
 ---
 
 Dear Friends and Partners,
@@ -16,6 +16,11 @@ We are also incredibly grateful for God's protection over our team. Just ten day
 
 We are thankful that the Lord allowed us to complete the mission and return home safely.
 
+<div style="display:flex;gap:16px;margin:32px 0">
+<img src="/blog/pakistan-recap/intro-1.jpg" alt="Dream On team ministering in Pakistan" style="width:50%;border-radius:8px" />
+<img src="/blog/pakistan-recap/intro-2.jpg" alt="Pakistan mission outreach" style="width:50%;border-radius:8px" />
+</div>
+
 ---
 
 ### Training Pastors and Leaders
@@ -24,6 +29,8 @@ One of the most important parts of the trip was investing in local leaders. We h
 
 Many of these leaders serve in extremely difficult conditions. Some travel long distances and face real opposition for preaching the Gospel. Yet their faith and dedication are inspiring. It was a privilege to strengthen and pray for them so they can continue reaching their communities.
 
+<img src="/blog/pakistan-recap/pastors-conference.jpg" alt="Pastors and leaders conference in Pakistan" style="width:100%;border-radius:8px;margin:24px 0" />
+
 ---
 
 ### Meeting With Government Leadership
@@ -31,6 +38,8 @@ Many of these leaders serve in extremely difficult conditions. Some travel long 
 During our time in Pakistan, we were also given the opportunity to meet and pray with the Deputy Speaker, who is the first Christian ever to serve in the government of Pakistan.
 
 It was a meaningful moment to stand together in prayer—asking God to give him wisdom, protection, and courage as he represents both his nation and the Christian community within it. Moments like this remind us that God is opening doors in places we never expected.
+
+<img src="/blog/pakistan-recap/government-meeting.jpg" alt="Meeting with the Deputy Speaker of Pakistan" style="width:85%;border-radius:8px;margin:24px auto;display:block" />
 
 ---
 
@@ -41,6 +50,8 @@ During the trip we traveled to remote villages near the border of India. The con
 Families often drink from contaminated sources that lead to disease and sickness. Seeing this firsthand deeply impacted us and reminded us how urgent the need is. Clean water is not just a humanitarian need—it also opens doors for the Gospel and transforms entire villages.
 
 We are now prayerfully considering how we can help bring clean water solutions to some of these communities.
+
+<img src="/blog/pakistan-recap/clean-water.jpg" alt="Clean water needs in remote villages of Pakistan" style="width:85%;border-radius:8px;margin:24px auto;display:block" />
 
 ---
 
@@ -76,6 +87,8 @@ Standing there was a powerful reminder of the legacy of those who have gone befo
 
 We would appreciate your prayers as we seek God's direction for what He may want to do there.
 
+<img src="/blog/pakistan-recap/historic-grounds.jpg" alt="Historic YMCA grounds in Karachi" style="width:85%;border-radius:8px;margin:24px auto;display:block" />
+
 ---
 
 ### Thank You for Being Part of This
@@ -91,6 +104,13 @@ Your prayers and generosity helped bring the Gospel, healing, and hope to people
 This May we will return to Campinas, Brazil for the 5th year to hold a two-day evangelistic outreach, where we are expecting over 50,000 people to gather in person to hear the Gospel.
 
 Year after year we continue to see incredible fruit in this city—people coming to Christ, powerful testimonies of healing, and local churches strengthened. Because of what God keeps doing in Campinas, we feel compelled to keep plowing the field for the Gospel's sake.
+
+<div style="display:flex;gap:12px;margin:24px 0">
+<img src="/blog/pakistan-recap/brazil-1.jpg" alt="Brazil outreach" style="width:25%;border-radius:8px" />
+<img src="/blog/pakistan-recap/brazil-2.jpg" alt="Brazil ministry" style="width:25%;border-radius:8px" />
+<img src="/blog/pakistan-recap/brazil-3.jpg" alt="Brazil crusade" style="width:25%;border-radius:8px" />
+<img src="/blog/pakistan-recap/brazil-4.jpg" alt="Brazil worship" style="width:25%;border-radius:8px" />
+</div>
 
 To make this year's outreach possible, we need to raise $20,000 to cover the costs of the event—sound, staging, permits, promotion, and local outreach efforts.
 
