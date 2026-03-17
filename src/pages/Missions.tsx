@@ -1,7 +1,23 @@
 import { Globe2, Calendar, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const upcomingTrips = [
+interface Trip {
+  id: string;
+  country: string;
+  flag: string;
+  title: string;
+  date: string;
+  description: string;
+  highlights: string[];
+  cta: string;
+  ctaLink: string;
+  blogLink?: string;
+  external?: boolean;
+  fundingCurrent?: number;
+  fundingGoal?: number;
+}
+
+const upcomingTrips: Trip[] = [
   {
     id: 'brazil-2026',
     country: 'Brazil',
