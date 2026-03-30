@@ -110,6 +110,11 @@ const team = [
     name: 'John Peak',
     role: 'Director of Media',
     image: 'john-peak.jpg'
+  },
+  {
+    name: 'Brie Sanders',
+    role: 'Director of Social Media',
+    image: 'brie-sanders.jpg'
   }
 ]
 
