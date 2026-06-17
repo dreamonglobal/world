@@ -19,24 +19,6 @@ interface Trip {
 
 const upcomingTrips: Trip[] = [
   {
-    id: 'brazil-2026',
-    country: 'Brazil',
-    flag: '🇧🇷',
-    title: 'Brazil Crusade',
-    date: 'May 2026',
-    description: 'Return to Brazil for another powerful crusade. We\'re believing for thousands to encounter Jesus and lives to be forever changed.',
-    highlights: [
-      'Large-scale evangelistic event',
-      'Youth conference',
-      'Worship & ministry nights',
-      'Leadership training',
-    ],
-    cta: 'Partner With Us',
-    ctaLink: '/donate',
-    fundingCurrent: 35000,
-    fundingGoal: 75000,
-  },
-  {
     id: 'honduras-2026',
     country: 'Honduras',
     flag: '🇭🇳',
@@ -52,7 +34,7 @@ const upcomingTrips: Trip[] = [
     cta: 'Sign Up Now',
     ctaLink: 'https://dreamon.gomethod.app/!/56456/honduras-coffee-missions-trip',
     external: true,
-    fundingCurrent: 0,
+    fundingCurrent: 2000,
     fundingGoal: 10000,
   },
 ];
