@@ -6,23 +6,23 @@ export const getAllCampaigns = async (): Promise<Campaign[]> => {
     {
       id: '1',
       title: 'Churches Built',
-      description: 'Help us build 100 churches. We have built 5 so far!',
+      description: 'Help us build 100 churches. We have built 7 so far!',
       image: '/church-building.jpg',
       date: '2025-01-01',
-      progress: 0.05,
+      progress: 0.07,
       goal: '100 Churches',
-      current: '5 Churches',
+      current: '7 Churches',
       slug: 'churches',
     },
     {
       id: '2',
       title: 'People Reached',
-      description: 'Our goal is to reach 1 million people. 200,000 reached so far!',
+      description: 'Our goal is to reach 1 million people. 285,000 reached so far!',
       image: '/brazil-crowd.jpg',
       date: '2025-01-01',
-      progress: 0.2,
+      progress: 0.285,
       goal: '1M People',
-      current: '200,000 People',
+      current: '285,000 People',
       slug: 'people',
     },
     {
@@ -31,10 +31,10 @@ export const getAllCampaigns = async (): Promise<Campaign[]> => {
       description: 'Build wells in Pakistan for $500 each. Clean water + the Gospel!',
       image: '/pakistan-well.jpg',
       date: '2026-01-01',
-      progress: 0.01,
+      progress: 0.025,
       goal: '200 Wells',
-      current: '2 Wells',
+      current: '5 Wells',
       slug: 'wells',
     },
   ];
-}; 
+};

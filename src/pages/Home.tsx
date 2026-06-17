@@ -276,7 +276,7 @@ export const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <Users className="w-8 h-8 mx-auto mb-4" />
-              <h3 className="text-4xl font-bold mb-2">200K+</h3>
+              <h3 className="text-4xl font-bold mb-2">285K+</h3>
               <p className="text-zinc-400">Ministered To</p>
             </div>
             <div className="text-center">
@@ -302,24 +302,24 @@ export const Home = () => {
               <Church className="w-12 h-12 mx-auto mb-6" />
               <h3 className="text-2xl font-bold mb-4">Churches Built</h3>
               <div className="flex items-center justify-center gap-2 text-4xl font-bold">
-                <span className="text-white">5</span>
+                <span className="text-white">7</span>
                 <span className="text-zinc-500">/</span>
                 <span className="text-zinc-500">100</span>
               </div>
               <div className="w-full bg-zinc-800 h-2 rounded-full mt-4">
-                <div className="bg-white h-full rounded-full" style={{ width: '10%' }}></div>
+                <div className="bg-white h-full rounded-full" style={{ width: '7%' }}></div>
               </div>
             </div>
             <div className="bg-zinc-900 rounded-lg p-8 text-center">
               <Users2 className="w-12 h-12 mx-auto mb-6" />
               <h3 className="text-2xl font-bold mb-4">People Reached</h3>
               <div className="flex items-center justify-center gap-2 text-4xl font-bold">
-                <span className="text-white">200,000</span>
+                <span className="text-white">285,000</span>
                 <span className="text-zinc-500">/</span>
                 <span className="text-zinc-500">1M</span>
               </div>
               <div className="w-full bg-zinc-800 h-2 rounded-full mt-4">
-                <div className="bg-white h-full rounded-full" style={{ width: '10%' }}></div>
+                <div className="bg-white h-full rounded-full" style={{ width: '28.5%' }}></div>
               </div>
             </div>
           </div>
