@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Droplets, Heart, MapPin, Book } from 'lucide-react';
 
 export const WellsBuilt = () => {
-  const wellsBuilt = 2;
+  const wellsBuilt = 5;
   const wellsGoal = 200;
   const costPerWell = 500;
   const progress = wellsBuilt / wellsGoal;
